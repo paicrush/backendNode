@@ -24,9 +24,9 @@ exports.getSearchProduct = (req, res, next) => {
         });
 }
 exports.getSearchOneProduct = (req, res, next) => {
-    const { id } = req.params;
-    console.log(id);
-    Product.findById(id)
+    const { productName } = req.params;
+    console.log(productName);
+    Product.findByName(productName)
         .then(product => {
             res.status(200).json(
                 

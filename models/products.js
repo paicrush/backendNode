@@ -72,6 +72,22 @@ class Products {
                 console.log(err);
             });
     }
+
+    static findByName(search_item) {
+        const db = getDb();
+        console.log(search_item);
+        return db
+        .collection('product')
+        .find({ productName: new RegExp(search_item, 'i') })
+        .toArray()
+        .then(product => {
+            console.log(product);
+            return product;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }
 }
 
 module.exports = Products;

@@ -6,7 +6,7 @@ const router = express.Router();
 const productsController = require('../controllers/products');
 const ordersController = require('../controllers/orders');
 // /admin/add-product => GET
-router.get('/product/:id', productsController.getSearchOneProduct);
+router.get('/product/:productName', productsController.getSearchOneProduct);
 router.get('/product', productsController.getSearchProduct);
 router.post('/product', productsController.postAddProduct);
 
