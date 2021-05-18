@@ -10,8 +10,8 @@ router.get('/product/:productName', productsController.getSearchOneProduct);
 router.get('/product', productsController.getSearchProduct);
 router.post('/product', productsController.postAddProduct);
 
-router.put('/product/:id', productsController.postUpdateProduct);
-
+router.put('/products/:id', productsController.postUpdateProduct);
+router.get('/search/:id', productsController.getSearchidproduct);
 router.delete('/product/:id', productsController.getDeleteProduct);
 
 router.get('/update/:product_id', productsController.getUpdateProduct);
